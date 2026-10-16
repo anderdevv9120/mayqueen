@@ -374,8 +374,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .main-nav {
     position: absolute;
     top: 100%;
-    left: calc(var(--gutter) * -1);
-    right: calc(var(--gutter) * -1);
+    left: 0;
+    right: 0;
     background: #fff;
     border-bottom: 1px solid var(--line);
     box-shadow: var(--shadow);
