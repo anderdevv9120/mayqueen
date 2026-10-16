@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayqueen – Demo giao diện</title>
+  <meta name="description" content="3 bản demo giao diện website thương mại điện tử cho thương hiệu Mayqueen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-900: #1F4D36;
+      --green-500: #8BC34A;
+      --sage: #DCE6CF;
+      --cream: #F7F6F0;
+      --text: #22302A;
+      --muted: #5B6B62;
+      --line: #E3E6DC;
+      --card: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--text);
+      font: 16px/1.6 "Be Vietnam Pro", system-ui, sans-serif;
+    }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 56px 0 32px; text-align: center; }
+    .brand { font: 600 14px/1 "Be Vietnam Pro", sans-serif; letter-spacing: .3em; color: var(--green-900); }
+    h1 {
+      font: 500 clamp(32px, 5vw, 52px)/1.15 "Fraunces", serif;
+      color: var(--green-900);
+      margin: 16px 0 12px;
+    }
+    header p { color: var(--muted); max-width: 60ch; margin: 0 auto; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      padding: 24px 0 64px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(31, 77, 54, .12); }
+    .card:focus-visible { outline: 3px solid var(--green-500); outline-offset: 3px; }
+    .thumb { aspect-ratio: 4 / 3; overflow: hidden; background: var(--sage); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .body { padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+    .tag { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--green-900); opacity: .7; }
+    .card h2 { font: 600 24px/1.25 "Fraunces", serif; margin: 0; color: var(--green-900); }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+    .go { margin-top: auto; padding-top: 12px; font-weight: 600; color: var(--green-900); }
+    footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 13px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">MAYQUEEN</div>
+    <h1>Chọn sống khỏe. Chọn yêu mình.</h1>
+    <p>3 bản demo giao diện website bán hàng cho Mayqueen Slim &amp; Yo Detox Extra. Chọn một phong cách để xem trước — mỗi bản có trang chủ, giỏ hàng, giới thiệu, liên hệ và chính sách.</p>
+  </header>
+
+  <main class="wrap grid">
+    <a class="card" href="demo-1/index.html">
+      <div class="thumb"><img src="product-images/prod2.webp" alt="Hộp và lọ Mayqueen Slim trên bục trắng"></div>
+      <div class="body">
+        <span class="tag">Demo 01</span>
+        <h2>Editorial Science</h2>
+        <p>Nhẹ nhàng, nhiều khoảng trắng, chữ serif thanh lịch. Kể câu chuyện thương hiệu và khoa học thành phần như một tạp chí sức khỏe.</p>
+        <span class="go">Xem demo →</span>
+      </div>
+    </a>
+    <a class="card" href="demo-2/index.html">
+      <div class="thumb"><img src="product-images/prod3.webp" alt="Hộp Mayqueen Slim bên cành lá xanh"></div>
+      <div class="body">
+        <span class="tag">Demo 02</span>
+        <h2>Clinical Lab</h2>
+        <p>Rõ ràng, giàu dữ liệu: thông số, lộ trình 30 ngày, bảng thành phần và so sánh. Phù hợp khách hàng thích tìm hiểu kỹ trước khi mua.</p>
+        <span class="go">Xem demo →</span>
+      </div>
+    </a>
+    <a class="card" href="demo-3/index.html">
+      <div class="thumb"><img src="product-images/prod5.webp" alt="Hai hộp Yo Detox Extra trên phiến đá giữa vườn xanh"></div>
+      <div class="body">
+        <span class="tag">Demo 03</span>
+        <h2>Bold Daily Ritual</h2>
+        <p>Mạnh mẽ, tối giản, xoay quanh thói quen mỗi ngày. Khối màu xanh lớn, thông điệp ngắn, tập trung chuyển đổi cho combo.</p>
+        <span class="go">Xem demo →</span>
+      </div>
+    </a>
+  </main>
+
+  <footer class="wrap">
+    Bản demo trình diễn — nội dung, giá và thành phần mang tính minh họa. © 2026 Mayqueen · BOT Việt Nam
+  </footer>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mayqueen Slim — Thực phẩm bảo vệ sức khỏe | Mayqueen</title>
+  <meta name="description" content="Mayqueen Slim hỗ trợ tăng cường chuyển hóa chất béo và hỗ trợ giảm béo. Kết hợp Yo Detox Extra cho lộ trình 30 ngày sống khỏe, yêu mình.">
+  <meta name="theme-color" content="#1F4D36">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231F4D36'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='17' fill='%23A6CE6B' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Lora:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- Icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5.5 8h13l-1 12.5h-11L5.5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.3L12 17.1l-5.7 3.1 1.2-6.3-4.7-4.4 6.4-.8L12 2.8Z"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2.5 6.5h11v9.5h-11zM13.5 9.5h4l3 3.2v3.3h-7"/><circle cx="6.5" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+  <symbol id="i-return" viewBox="0 0 24 24"><path d="M4 9h11a5 5 0 0 1 0 10H8"/><path d="M8 5L4 9l4 4"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9.5L4 20V5Z"/><path d="M8 9.5h8M8 12.5h5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></symbol>
+  <symbol id="i-pill" viewBox="0 0 24 24"><path d="M10.6 3.9a5 5 0 0 1 7.1 7.1l-6.7 6.7a5 5 0 0 1-7.1-7.1l6.7-6.7Z"/><path d="M7.3 7.3l7.1 7.1"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 19.5C5 11 10 5 20 4.5c0 10-5.5 15.5-15 15Z"/><path d="M5 19.5c2.8-4 6-7 10-9.5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3Z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6.2L5 18a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-8.8V3"/><path d="M7.4 15h9.2"/></symbol>
+  <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
+  <symbol id="i-refund" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.6 9.3c-.5-.8-1.4-1.3-2.6-1.3-1.5 0-2.6.8-2.6 2s1.1 1.6 2.6 2 2.6.8 2.6 2-1.1 2-2.6 2c-1.2 0-2.1-.5-2.6-1.3M12 6.3V8M12 16v1.7"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14.5 21v-7.5h2.7l.4-3.2h-3.1V8.4c0-.9.3-1.6 1.6-1.6h1.6V4a21 21 0 0 0-2.4-.1c-2.4 0-4 1.5-4 4.1v2.3H8.6v3.2h2.7V21"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path d="M14 3.5v11a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3.5c.5 2.8 2.3 4.5 5 4.8"/></symbol>
+  <symbol id="i-yt" viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.5v5l4.5-2.5L10 9.5Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+
+<!-- 1. Top bar -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <a href="../index.html">← Tất cả demo</a>
+    <p class="topbar-msg"><span class="mono">FREESHIP</span>Miễn phí vận chuyển cho đơn từ 500.000đ</p>
+    <p class="topbar-hotline mono">Hotline 1900 6868</p>
+  </div>
+</div>
+
+<!-- 2. Header -->
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="Mayqueen — Trang chủ">MAYQUEEN<span class="logo-dot" aria-hidden="true"></span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Điều hướng chính">
+      <ul>
+        <li><a href="index.html" aria-current="page">Trang chủ</a></li>
+        <li><a href="#products">Sản phẩm</a></li>
+        <li><a href="#song-dep">Sống đẹp</a></li>
+        <li><a href="about.html">Về chúng tôi</a></li>
+        <li><a href="contact.html">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" type="button" data-open-cart aria-controls="cart-drawer" aria-label="Mở giỏ hàng">
+        <svg class="icon" aria-hidden="true"><use href="#i-bag"/></svg>
+        <span class="cart-badge" data-cart-count hidden>0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- 3. Product hero -->
+  <section class="hero" id="products" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="gallery">
+        <div class="gallery-main">
+          <img id="gallery-main" src="../product-images/prod2.webp" alt="Hộp và lọ Mayqueen Slim đặt trên bục trưng bày, nền lá xanh" width="1000" height="1000" fetchpriority="high">
+        </div>
+        <div class="gallery-thumbs" role="group" aria-label="Chọn ảnh sản phẩm">
+          <button class="thumb" type="button" data-thumb aria-pressed="true" aria-label="Ảnh 1: hộp và lọ trên bục" data-src="../product-images/prod2.webp" data-alt="Hộp và lọ Mayqueen Slim đặt trên bục trưng bày, nền lá xanh">
+            <img src="../product-images/prod2.webp" alt="" width="200" height="200" loading="lazy">
+          </button>
+          <button class="thumb" type="button" data-thumb aria-pressed="false" aria-label="Ảnh 2: hộp sản phẩm giữa lá xanh" data-src="../product-images/prod3.webp" data-alt="Hộp Mayqueen Slim giữa những tán lá xanh tươi">
+            <img src="../product-images/prod3.webp" alt="" width="200" height="200" loading="lazy">
+          </button>
+          <button class="thumb" type="button" data-thumb aria-pressed="false" aria-label="Ảnh 3: lọ và hộp lơ lửng" data-src="../product-images/prod4.webp" data-alt="Lọ viên nang và hộp Mayqueen Slim lơ lửng trên nền xanh nhạt">
+            <img src="../product-images/prod4.webp" alt="" width="200" height="200" loading="lazy">
+          </button>
+        </div>
+      </div>
+
+      <div class="buybox">
+        <h1 id="hero-title">Mayqueen Slim</h1>
+        <p class="serif-accent">Chăm sóc vóc dáng. Nuôi dưỡng tự tin.</p>
+
+        <div class="rating">
+          <span class="stars" role="img" aria-label="Đánh giá 4.9 trên 5 sao">
+            <svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg>
+          </span>
+          <span class="mono"><strong>4.9</strong></span>
+          <span aria-hidden="true">·</span>
+          <a href="#reviews">1.2k đánh giá (demo)</a>
+        </div>
+
+        <p class="tag-row">
+          <span class="tag">30 viên</span><span class="tag">1 viên/ngày</span><span class="tag">Viên nang</span>
+        </p>
+
+        <ul class="benefits">
+          <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ tăng cường chuyển hóa chất béo thành năng lượng</li>
+          <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ giảm cảm giác thèm ngọt và cảm giác đói giữa các bữa</li>
+          <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ giảm béo, giúp vóc dáng gọn gàng và nhẹ nhõm hơn</li>
+        </ul>
+
+        <fieldset class="packs" aria-label="Chọn gói">
+          <label class="pack">
+            <input type="radio" name="pack" value="slim" checked>
+            <span>
+              <span class="pack-name">1 lọ Mayqueen Slim</span>
+              <span class="pack-meta mono">30 viên · dùng 30 ngày</span>
+            </span>
+            <span class="pack-price mono">550.000đ</span>
+          </label>
+          <label class="pack">
+            <input type="radio" name="pack" value="combo">
+            <span class="pack-badge">Phổ biến nhất</span>
+            <span>
+              <span class="pack-name">Combo Slim + Yo Detox Extra</span>
+              <span class="pack-meta mono">1 lọ 30 viên + 1 hộp 20 gói</span>
+            </span>
+            <span class="pack-price mono">849.000đ<s>940.000đ</s></span>
+          </label>
+          <label class="pack">
+            <input type="radio" name="pack" value="slim3">
+            <span class="pack-badge dark">Tiết kiệm 160.000đ</span>
+            <span>
+              <span class="pack-name">Liệu trình 3 lọ</span>
+              <span class="pack-meta mono">90 viên · dùng 90 ngày</span>
+            </span>
+            <span class="pack-price mono">1.490.000đ<s>1.650.000đ</s></span>
+          </label>
+        </fieldset>
+
+        <div class="buy-row">
+          <div class="qty" role="group" aria-label="Số lượng">
+            <button type="button" data-step="-1" aria-label="Giảm số lượng">−</button>
+            <input id="hero-qty" type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="Số lượng">
+            <button type="button" data-step="1" aria-label="Tăng số lượng">+</button>
+          </div>
+          <button class="btn btn-primary btn-lg" type="button" data-add="slim" data-qty-input="hero-qty" data-hero-add>
+            Thêm vào giỏ · <span class="mono" data-hero-price>550.000đ</span>
+          </button>
+        </div>
+        <button class="btn btn-outline btn-lg btn-block buy-now" type="button" data-add="slim" data-qty-input="hero-qty" data-hero-add data-buy-now>Mua ngay</button>
+
+        <ul class="guarantees">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-truck"/></svg>Giao 2h nội thành</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-return"/></svg>Đổi trả 7 ngày</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>Tư vấn 1:1</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Spec strip -->
+  <section class="spec-strip" aria-label="Thông số Mayqueen Slim">
+    <div class="container">
+      <dl class="spec-grid">
+        <div class="spec"><dt>Dạng bào chế</dt><dd>Viên nang</dd></div>
+        <div class="spec"><dt>Liều dùng</dt><dd>1 viên/ngày</dd></div>
+        <div class="spec"><dt>Quy cách</dt><dd>30 viên/lọ</dd></div>
+        <div class="spec"><dt>Xuất xứ</dt><dd>Việt Nam</dd></div>
+        <div class="spec"><dt>Tiêu chuẩn</dt><dd>GMP (demo)</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 5. 30-day journey -->
+  <section class="section" aria-labelledby="journey-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">01 — Lộ trình</p>
+        <h2 id="journey-title">Lộ trình 30 ngày</h2>
+        <p class="lead">Thay đổi bền vững đến từ từng bước nhỏ. Đây là những gì bạn có thể mong đợi khi dùng đều đặn mỗi ngày, kết hợp ăn uống cân bằng và vận động nhẹ.</p>
+      </div>
+      <ol class="journey">
+        <li class="journey-step reveal">
+          <span class="journey-dot" aria-hidden="true"></span>
+          <p class="label">Tuần 01 · Ngày 1–7</p>
+          <h3>Làm quen</h3>
+          <p>Cơ thể thích nghi với nhịp mới. Tiêu hóa êm hơn, bụng nhẹ nhàng hơn sau bữa ăn.</p>
+          <div class="journey-meter"><p class="label"><span>Tiến trình</span><span>25%</span></p><div class="bar"><span style="--w:25%"></span></div></div>
+        </li>
+        <li class="journey-step reveal">
+          <span class="journey-dot" aria-hidden="true"></span>
+          <p class="label">Tuần 02 · Ngày 8–14</p>
+          <h3>Ổn định cơn thèm</h3>
+          <p>Cảm giác thèm ngọt và ăn vặt giảm dần. Bạn dễ giữ khẩu phần hợp lý hơn.</p>
+          <div class="journey-meter"><p class="label"><span>Tiến trình</span><span>50%</span></p><div class="bar"><span style="--w:50%"></span></div></div>
+        </li>
+        <li class="journey-step reveal">
+          <span class="journey-dot" aria-hidden="true"></span>
+          <p class="label">Tuần 03 · Ngày 15–21</p>
+          <h3>Nhẹ nhõm hơn</h3>
+          <p>Cơ thể ít tích nước, cảm giác săn gọn hơn. Năng lượng ổn định suốt ngày dài.</p>
+          <div class="journey-meter"><p class="label"><span>Tiến trình</span><span>75%</span></p><div class="bar"><span style="--w:75%"></span></div></div>
+        </li>
+        <li class="journey-step reveal">
+          <span class="journey-dot" aria-hidden="true"></span>
+          <p class="label">Tuần 04 · Ngày 22–30</p>
+          <h3>Thói quen mới</h3>
+          <p>Nghi thức mỗi ngày trở thành thói quen. Vóc dáng gọn gàng hơn, tự tin hơn khi soi gương.</p>
+          <div class="journey-meter"><p class="label"><span>Tiến trình</span><span>100%</span></p><div class="bar"><span style="--w:100%"></span></div></div>
+        </li>
+      </ol>
+      <p class="note">*Hiệu quả có thể khác nhau tùy cơ địa mỗi người. Nên kết hợp chế độ ăn uống lành mạnh và vận động phù hợp.</p>
+    </div>
+  </section>
+
+  <!-- 6. Daily ritual -->
+  <section class="section section-sage section-bordered" aria-labelledby="ritual-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">02 — Nghi thức</p>
+        <h2 id="ritual-title">Nghi thức mỗi ngày</h2>
+        <p class="lead">Ba khoảnh khắc đơn giản cho combo Mayqueen Slim + Yo Detox Extra. Không cần thay đổi cả cuộc sống — chỉ cần đều đặn.</p>
+      </div>
+      <ol class="ritual">
+        <li class="ritual-card reveal">
+          <div class="ritual-head">
+            <span class="ritual-icon"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></span>
+            <span class="ritual-time mono">07:00</span>
+          </div>
+          <p class="label">Buổi sáng</p>
+          <h3>1 gói Yo Detox Extra</h3>
+          <p>Pha 1 gói với khoảng 150ml nước ấm, uống trước bữa sáng để khởi động hệ tiêu hóa nhẹ nhàng.</p>
+          <span class="tag">Yo Detox · 150ML</span>
+        </li>
+        <li class="ritual-card reveal">
+          <div class="ritual-head">
+            <span class="ritual-icon"><svg class="icon" aria-hidden="true"><use href="#i-pill"/></svg></span>
+            <span class="ritual-time mono">12:30</span>
+          </div>
+          <p class="label">Buổi trưa</p>
+          <h3>1 viên Mayqueen Slim</h3>
+          <p>Uống 1 viên sau bữa trưa khoảng 30 phút cùng một ly nước đầy để hỗ trợ chuyển hóa trong ngày.</p>
+          <span class="tag">Slim · sau ăn 30 phút</span>
+        </li>
+        <li class="ritual-card reveal">
+          <div class="ritual-head">
+            <span class="ritual-icon"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg></span>
+            <span class="ritual-time mono">22:30</span>
+          </div>
+          <p class="label">Buổi tối</p>
+          <h3>Thói quen lành mạnh</h3>
+          <p>Uống đủ 1,5–2 lít nước mỗi ngày, ăn tối nhẹ trước 19h và đi ngủ trước 23h để cơ thể phục hồi.</p>
+          <span class="tag">2L nước · ngủ trước 23h</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 7. Ingredients -->
+  <section class="section" aria-labelledby="ing-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">03 — Thành phần</p>
+        <h2 id="ing-title">Bên trong mỗi khẩu phần</h2>
+        <p class="lead">Minh bạch từng thành phần, hàm lượng và vai trò — để bạn hiểu rõ mình đang chăm sóc cơ thể bằng gì.</p>
+      </div>
+
+      <div class="tablist" role="tablist" aria-label="Chọn sản phẩm để xem thành phần">
+        <button class="tab" type="button" role="tab" id="tab-slim" aria-selected="true" aria-controls="panel-slim">Mayqueen Slim</button>
+        <button class="tab" type="button" role="tab" id="tab-detox" aria-selected="false" aria-controls="panel-detox" tabindex="-1">Yo Detox Extra</button>
+      </div>
+
+      <div class="tabpanel reveal" role="tabpanel" id="panel-slim" aria-labelledby="tab-slim" tabindex="0">
+        <p class="panel-meta"><span class="tag">Khẩu phần: 1 viên nang</span><span class="tag">5 hoạt chất chính</span></p>
+        <ul class="ing-list">
+          <li class="ing-row ing-head" aria-hidden="true"><span class="label">Thành phần</span><span class="label">Hàm lượng</span><span class="label">Vai trò</span><span class="label">Tỷ trọng</span></li>
+          <li class="ing-row">
+            <span class="ing-name">Chiết xuất trà xanh<small>EGCG · Camellia sinensis</small></span>
+            <span class="ing-amt">200 mg</span>
+            <span class="ing-role">Hỗ trợ sinh nhiệt và tăng cường chuyển hóa năng lượng.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:100%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">L-Carnitine<small>Amino acid</small></span>
+            <span class="ing-amt">150 mg</span>
+            <span class="ing-role">Hỗ trợ vận chuyển acid béo vào ty thể để tạo năng lượng.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:75%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Garcinia cambogia<small>HCA · Quả bứa</small></span>
+            <span class="ing-amt">100 mg</span>
+            <span class="ing-role">Hỗ trợ giảm cảm giác thèm ăn, hạn chế tích lũy mỡ.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:50%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Chiết xuất cà phê xanh<small>Acid chlorogenic</small></span>
+            <span class="ing-amt">80 mg</span>
+            <span class="ing-role">Hỗ trợ chuyển hóa đường và chất béo sau bữa ăn.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:40%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Chromium picolinate<small>Vi khoáng</small></span>
+            <span class="ing-amt">100 mcg</span>
+            <span class="ing-role">Hỗ trợ ổn định đường huyết, giảm cơn thèm ngọt.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:8%"></span></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tabpanel reveal" role="tabpanel" id="panel-detox" aria-labelledby="tab-detox" tabindex="0" hidden>
+        <p class="panel-meta"><span class="tag">Khẩu phần: 1 gói bột</span><span class="tag">5 hoạt chất chính</span></p>
+        <ul class="ing-list">
+          <li class="ing-row ing-head" aria-hidden="true"><span class="label">Thành phần</span><span class="label">Hàm lượng</span><span class="label">Vai trò</span><span class="label">Tỷ trọng</span></li>
+          <li class="ing-row">
+            <span class="ing-name">Chất xơ hòa tan<small>Inulin</small></span>
+            <span class="ing-amt">3.000 mg</span>
+            <span class="ing-role">Hỗ trợ nhu động ruột, tạo cảm giác no lâu.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:100%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Chiết xuất rau má<small>Centella asiatica</small></span>
+            <span class="ing-amt">500 mg</span>
+            <span class="ing-role">Hỗ trợ thanh nhiệt, làm mát cơ thể, hỗ trợ làn da.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:55%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Chiết xuất atiso<small>Cynara scolymus</small></span>
+            <span class="ing-amt">400 mg</span>
+            <span class="ing-role">Hỗ trợ chức năng gan, hỗ trợ thải độc và giảm tích nước.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:45%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Diệp lục<small>Chlorophyll</small></span>
+            <span class="ing-amt">100 mg</span>
+            <span class="ing-role">Hỗ trợ khử mùi cơ thể, hỗ trợ đẹp da.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:20%"></span></div>
+          </li>
+          <li class="ing-row">
+            <span class="ing-name">Men vi sinh<small>Probiotic</small></span>
+            <span class="ing-amt">1 tỷ CFU</span>
+            <span class="ing-role">Hỗ trợ cân bằng hệ vi sinh đường ruột, tiêu hóa khỏe.</span>
+            <div class="bar" aria-hidden="true"><span style="--w:30%"></span></div>
+          </li>
+        </ul>
+      </div>
+      <p class="note">*Thành phần mang tính minh họa cho bản demo. Thanh tỷ trọng chỉ để minh họa trực quan, không phản ánh công thức thực tế.</p>
+    </div>
+  </section>
+
+  <!-- 8. Comparison -->
+  <section class="section section-cream section-bordered" aria-labelledby="compare-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">04 — So sánh</p>
+        <h2 id="compare-title">Mayqueen vs. cách thông thường</h2>
+        <p class="lead">Giảm cân không phải là cuộc đua. Một lộ trình an toàn, có người đồng hành, luôn bền vững hơn những lối tắt.</p>
+      </div>
+      <div class="table-scroll reveal" role="region" aria-labelledby="compare-title" tabindex="0">
+        <table class="compare">
+          <caption class="visually-hidden">So sánh Combo Mayqueen với nhịn ăn và thuốc giảm cân trôi nổi</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tiêu chí</th>
+              <th scope="col" class="col-mq">Mayqueen Combo</th>
+              <th scope="col">Nhịn ăn</th>
+              <th scope="col">Thuốc giảm cân trôi nổi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Nguồn gốc rõ ràng</th>
+              <td class="col-mq"><span class="mark mark-yes"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span class="visually-hidden">Có</span></td>
+              <td><span class="mark mark-na" aria-hidden="true">—</span><span class="visually-hidden">Không áp dụng</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Thành phần tự nhiên</th>
+              <td class="col-mq"><span class="mark mark-yes"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span class="visually-hidden">Có</span></td>
+              <td><span class="mark mark-na" aria-hidden="true">—</span><span class="visually-hidden">Không áp dụng</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không rõ</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Không gây mệt mỏi</th>
+              <td class="col-mq"><span class="mark mark-yes"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span class="visually-hidden">Có</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Hỗ trợ thải độc</th>
+              <td class="col-mq"><span class="mark mark-yes"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span class="visually-hidden">Có</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Tư vấn đồng hành</th>
+              <td class="col-mq"><span class="mark mark-yes"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span><span class="visually-hidden">Có</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+              <td><span class="mark mark-no"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg></span><span class="visually-hidden">Không</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Giá/ngày</th>
+              <td class="col-mq mono">~28.000đ</td>
+              <td class="mono">0đ*</td>
+              <td class="mono">Không rõ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="label scroll-hint">← Vuốt ngang để xem đầy đủ →</p>
+      <p class="note">*Nhịn ăn không tốn chi phí nhưng dễ gây mệt mỏi, thiếu chất và tăng cân trở lại. Giá/ngày của Combo tính theo 849.000đ cho khoảng 30 ngày sử dụng.</p>
+    </div>
+  </section>
+
+  <!-- 9. Yo Detox spotlight + combo -->
+  <section class="section" aria-labelledby="detox-title">
+    <div class="container">
+      <div class="spotlight">
+        <div class="spotlight-media reveal">
+          <img src="../product-images/prod5.webp" alt="Hai hộp Yo Detox Extra đặt trên phiến đá giữa vườn cây xanh" width="1000" height="1000" loading="lazy">
+          <span class="tag">YO-DETOX · 20 GÓI</span>
+        </div>
+        <div class="spotlight-body reveal">
+          <p class="eyebrow">05 — Thực phẩm bổ sung</p>
+          <h2 id="detox-title">Yo Detox Extra</h2>
+          <p class="serif-accent">Nhẹ bụng mỗi sáng, rạng rỡ mỗi ngày.</p>
+          <p class="desc">Bột pha uống vị thanh mát với chất xơ hòa tan, diệp lục và men vi sinh — người bạn đồng hành giúp cơ thể thải độc nhẹ nhàng và tiêu hóa khỏe hơn.</p>
+          <p class="tag-row"><span class="tag">20 gói</span><span class="tag">1 gói/ngày</span><span class="tag">Bột pha uống</span></p>
+          <ul class="benefits">
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ thải độc cơ thể, giảm tích nước</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ tiêu hóa, cân bằng hệ vi sinh đường ruột</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ đẹp da, giảm mụn và giảm sạm</li>
+          </ul>
+          <div class="price-line">
+            <span class="price-big">390.000đ</span>
+            <span class="unit">/ hộp 20 gói</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary btn-lg" type="button" data-add="detox">Thêm vào giỏ</button>
+            <button class="btn btn-outline btn-lg" type="button" data-add="detox" data-buy-now>Mua ngay</button>
+          </div>
+        </div>
+      </div>
+
+      <article class="combo-card reveal" aria-labelledby="combo-title">
+        <img src="../others/vn-11134207-81ztc-mu3nwyhnak93cd@resize_w900_nl1.jpg" alt="Poster lợi ích combo Mayqueen Slim và Yo Detox Extra với hai hộp sản phẩm giữa lá xanh" width="702" height="900" loading="lazy">
+        <div>
+          <p class="eyebrow">Combo tiết kiệm</p>
+          <h3 id="combo-title">Mayqueen Slim + Yo Detox Extra</h3>
+          <p class="serif-accent">Tăng tốc giảm cân lành mạnh — Thải độc cơ thể toàn diện.</p>
+          <ul class="combo-benefits">
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Hỗ trợ giảm cân an toàn, hiệu quả</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Thúc đẩy chuyển hóa chất béo thành năng lượng</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Giảm các cơn thèm ăn ngọt, giảm cảm giác đói</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Thải độc cơ thể, giảm tích nước</li>
+            <li><span class="check-dot"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg></span>Đẹp da, hỗ trợ giảm mụn, giảm sạm</li>
+          </ul>
+          <div class="price-line">
+            <span class="price-big">849.000đ</span>
+            <s>940.000đ</s>
+            <span class="save-pill">−91.000đ</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary btn-lg" type="button" data-add="combo">Thêm combo vào giỏ</button>
+            <button class="btn btn-outline btn-lg" type="button" data-add="combo" data-buy-now>Mua ngay</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 10. Commitments -->
+  <section class="section section-sage section-bordered" aria-labelledby="commit-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">06 — Cam kết</p>
+        <h2 id="commit-title">Chất lượng bạn có thể kiểm chứng</h2>
+      </div>
+      <ul class="commit-grid reveal">
+        <li class="commit">
+          <span class="commit-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield"/></svg></span>
+          <h3>Đạt chuẩn GMP (demo)</h3>
+          <p>Sản xuất trên dây chuyền đạt tiêu chuẩn thực hành sản xuất tốt.</p>
+        </li>
+        <li class="commit">
+          <span class="commit-icon"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg></span>
+          <h3>Kiểm nghiệm định kỳ</h3>
+          <p>Mỗi lô sản phẩm đều được kiểm tra chỉ tiêu an toàn trước khi xuất xưởng.</p>
+        </li>
+        <li class="commit">
+          <span class="commit-icon"><svg class="icon" aria-hidden="true"><use href="#i-ban"/></svg></span>
+          <h3>Không chất cấm</h3>
+          <p>Không sibutramine, không chất cấm, không chất kích thích gây hại.</p>
+        </li>
+        <li class="commit">
+          <span class="commit-icon"><svg class="icon" aria-hidden="true"><use href="#i-refund"/></svg></span>
+          <h3>Hoàn tiền nếu không hài lòng</h3>
+          <p>Hoàn tiền trong 7 ngày với sản phẩm còn nguyên tem, theo chính sách đổi trả.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 11. Sống đẹp cùng Mayqueen -->
+  <section class="section" id="song-dep" aria-labelledby="songdep-title">
+    <div class="container">
+      <div class="section-head-row">
+        <div class="section-head reveal">
+          <p class="eyebrow">07 — Thư viện</p>
+          <h2 id="songdep-title">Sống đẹp cùng Mayqueen</h2>
+          <p class="lead">Công thức ăn uống, thói quen mỗi ngày và khoa học dễ hiểu — tất cả trong một nơi.</p>
+        </div>
+        <a class="link-arrow" href="#">Xem tất cả bài viết <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+
+      <div class="posts">
+        <article class="post post-featured reveal">
+          <a href="#">
+            <div class="post-media">
+              <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=1200&q=75&auto=format&fit=crop" alt="Ly sinh tố xanh với lá bạc hà, bên cạnh kiwi, táo xanh, dưa leo và rau bina" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="post-meta"><span class="cat cat-recipe">Công thức</span><span class="label">5 phút đọc</span></div>
+            <h3>Sinh tố xanh 5 phút cho buổi sáng nhẹ bụng</h3>
+            <p class="excerpt">Kiwi, táo xanh, rau bina và một chút bạc hà — công thức giàu chất xơ, ít đường, giúp bạn no lâu đến tận bữa trưa.</p>
+          </a>
+        </article>
+        <article class="post reveal">
+          <a href="#">
+            <div class="post-media">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&q=75&auto=format&fit=crop" alt="Bát salad nhiều màu với bơ, cà chua bi, đậu gà, khoai lang và rau xanh" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="post-meta"><span class="cat cat-recipe">Công thức</span><span class="label">4 phút đọc</span></div>
+            <h3>Đĩa ăn cân bằng: quy tắc 50/25/25</h3>
+          </a>
+        </article>
+        <article class="post reveal">
+          <a href="#">
+            <div class="post-media">
+              <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=75&auto=format&fit=crop" alt="Người phụ nữ tập yoga bên bờ biển lúc hoàng hôn" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="post-meta"><span class="cat cat-habit">Thói quen</span><span class="label">3 phút đọc</span></div>
+            <h3>10 phút giãn cơ buổi sáng cho người bận rộn</h3>
+          </a>
+        </article>
+        <article class="post reveal">
+          <a href="#">
+            <div class="post-media">
+              <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=1200&q=75&auto=format&fit=crop" alt="Phòng ngủ yên tĩnh với ánh đèn vàng dịu bên giường" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="post-meta"><span class="cat cat-habit">Thói quen</span><span class="label">4 phút đọc</span></div>
+            <h3>Vì sao ngủ trước 23h giúp kiểm soát cơn thèm ăn?</h3>
+          </a>
+        </article>
+        <article class="post reveal">
+          <a href="#">
+            <div class="post-media">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1200&q=75&auto=format&fit=crop" alt="Pipet nhỏ dung dịch vào khay ống nghiệm trong phòng thí nghiệm" width="1200" height="900" loading="lazy">
+            </div>
+            <div class="post-meta"><span class="cat cat-science">Khoa học</span><span class="label">6 phút đọc</span></div>
+            <h3>Chuyển hóa chất béo diễn ra như thế nào trong cơ thể?</h3>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. Reviews -->
+  <section class="section section-cream section-bordered" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">08 — Đánh giá</p>
+        <h2 id="reviews-title">Khách hàng nói gì về Mayqueen</h2>
+      </div>
+
+      <div class="reviews-top">
+        <div class="review-summary reveal">
+          <div class="score">
+            <span class="score-num">4.9</span>
+            <div>
+              <span class="stars" role="img" aria-label="4.9 trên 5 sao">
+                <svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg>
+              </span>
+              <span class="label">Dựa trên 1.248 đánh giá (demo)</span>
+            </div>
+          </div>
+          <ul class="dist" aria-label="Phân bố số sao">
+            <li><span>5★</span><div class="bar" role="img" aria-label="88% đánh giá 5 sao"><span style="--w:88%"></span></div><span>88%</span></li>
+            <li><span>4★</span><div class="bar" role="img" aria-label="9% đánh giá 4 sao"><span style="--w:9%"></span></div><span>9%</span></li>
+            <li><span>3★</span><div class="bar" role="img" aria-label="2% đánh giá 3 sao"><span style="--w:2%"></span></div><span>2%</span></li>
+            <li><span>2★</span><div class="bar" role="img" aria-label="1% đánh giá 2 sao"><span style="--w:1%"></span></div><span>1%</span></li>
+            <li><span>1★</span><div class="bar" role="img" aria-label="0% đánh giá 1 sao"><span style="--w:0%"></span></div><span>0%</span></li>
+          </ul>
+          <div class="stat-box">
+            <strong>92%</strong>
+            <p>khách hàng cảm thấy giảm thèm ngọt sau 2 tuần dùng combo — khảo sát khách hàng (demo), n = 320.</p>
+          </div>
+        </div>
+
+        <figure class="review-photo reveal">
+          <img src="../others/vn-11134207-81ztc-mu3nr9ugitxj14@resize_w900_nl.webp" alt="Khách hàng mỉm cười cầm các gói Yo Detox Extra, trên bàn là ly nước xanh cùng hộp Mayqueen Slim và Yo Detox Extra" width="900" height="900" loading="lazy">
+          <figcaption>
+            <blockquote>“Sáng một ly Yo Detox, trưa một viên Slim — nhẹ nhàng mà đều đặn. Mình thấy tự tin hơn mỗi ngày.”</blockquote>
+            <cite>Ngọc Trâm · TP. Hồ Chí Minh · Đã mua combo</cite>
+          </figcaption>
+        </figure>
+      </div>
+
+      <ul class="review-grid">
+        <li class="reveal">
+          <article class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">TH</span>
+              <div><p class="review-name">Nguyễn Thu Hà</p><p class="review-city">29 tuổi · Hà Nội</p></div>
+            </div>
+            <span class="stars" role="img" aria-label="5 trên 5 sao"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="text">Mình dùng combo được 3 tuần, buổi sáng uống Yo Detox thấy bụng nhẹ hẳn, ít thèm đồ ngọt hơn. Bạn tư vấn nhiệt tình, còn nhắc lịch uống đều.</p>
+            <span class="verified"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Đã mua hàng · Combo</span>
+          </article>
+        </li>
+        <li class="reveal">
+          <article class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">MA</span>
+              <div><p class="review-name">Trần Minh Anh</p><p class="review-city">34 tuổi · TP. Hồ Chí Minh</p></div>
+            </div>
+            <span class="stars" role="img" aria-label="5 trên 5 sao"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="text">Thông tin thành phần rõ ràng, đóng gói đẹp, giao trong 2 giờ. Kết hợp ăn uống điều độ nên mình thấy vóc dáng gọn hơn sau một tháng.</p>
+            <span class="verified"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Đã mua hàng · Liệu trình 3 lọ</span>
+          </article>
+        </li>
+        <li class="reveal">
+          <article class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">PL</span>
+              <div><p class="review-name">Lê Phương Linh</p><p class="review-city">26 tuổi · Đà Nẵng</p></div>
+            </div>
+            <span class="stars" role="img" aria-label="4 trên 5 sao"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"/></svg><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></span>
+            <p class="text">Yo Detox dễ uống, vị thanh mát. Slim uống sau bữa trưa không thấy mệt hay bồn chồn. Mình đang dùng sang hộp thứ hai.</p>
+            <span class="verified"><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Đã mua hàng · Yo Detox Extra</span>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 13. FAQ -->
+  <section class="section" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section-head center reveal">
+        <p class="eyebrow">09 — Hỏi đáp</p>
+        <h2 id="faq-title">Câu hỏi thường gặp</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>Cách dùng Mayqueen Slim như thế nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Uống 1 viên/ngày, sau bữa trưa khoảng 30 phút, cùng một ly nước đầy. Không dùng quá liều khuyến nghị. Nên kết hợp chế độ ăn cân bằng và vận động nhẹ nhàng để đạt hiệu quả tốt nhất.</p></div>
+        </details>
+        <details>
+          <summary>Ai không nên dùng sản phẩm?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Phụ nữ mang thai hoặc đang cho con bú, người dưới 18 tuổi và người mẫn cảm với bất kỳ thành phần nào của sản phẩm không nên sử dụng.</p><p>Nếu bạn đang điều trị bệnh lý hoặc dùng thuốc, vui lòng tham khảo ý kiến bác sĩ trước khi dùng.</p></div>
+        </details>
+        <details>
+          <summary>Bao lâu thì thấy hiệu quả?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Nhiều khách hàng cảm nhận cơ thể nhẹ nhàng hơn sau 1–2 tuần và thấy thay đổi rõ hơn sau một liệu trình 30 ngày. Hiệu quả có thể khác nhau tùy cơ địa, chế độ ăn uống và mức độ vận động của mỗi người.</p></div>
+        </details>
+        <details>
+          <summary>Dùng combo Slim + Yo Detox Extra thế nào?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Buổi sáng: pha 1 gói Yo Detox Extra với khoảng 150ml nước ấm, uống trước bữa sáng. Buổi trưa: uống 1 viên Mayqueen Slim sau ăn 30 phút. Buổi tối: uống đủ nước và ngủ trước 23h.</p></div>
+        </details>
+        <details>
+          <summary>Chính sách đổi trả ra sao?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></summary>
+          <div class="answer"><p>Bạn được đổi trả trong 7 ngày kể từ khi nhận hàng nếu sản phẩm lỗi, hư hỏng hoặc còn nguyên tem niêm phong mà bạn chưa hài lòng. Xem chi tiết tại <a href="policy.html#doi-tra">Chính sách đổi trả</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 14. Footer -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="logo" href="index.html" aria-label="Mayqueen — Trang chủ">MAYQUEEN<span class="logo-dot" aria-hidden="true"></span></a>
+      <p>Chọn sống khỏe. Chọn yêu mình. Chăm sóc vóc dáng, nuôi dưỡng tự tin mỗi ngày.</p>
+      <ul class="social" aria-label="Mạng xã hội">
+        <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg></a></li>
+        <li><a href="#" aria-label="TikTok"><svg class="icon" aria-hidden="true"><use href="#i-tt"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-yt"/></svg></a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Sản phẩm</h2>
+      <ul class="footer-list">
+        <li><a href="#products">Mayqueen Slim</a></li>
+        <li><a href="#detox-title">Yo Detox Extra</a></li>
+        <li><a href="#combo-title">Combo Slim + Yo Detox</a></li>
+        <li><a href="#song-dep">Sống đẹp cùng Mayqueen</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Hỗ trợ</h2>
+      <ul class="footer-list">
+        <li><a href="policy.html#giao-hang">Chính sách giao hàng</a></li>
+        <li><a href="policy.html#doi-tra">Chính sách đổi trả</a></li>
+        <li><a href="policy.html#bao-mat">Chính sách bảo mật</a></li>
+        <li><a href="policy.html#thanh-toan">Thanh toán</a></li>
+        <li><a href="about.html">Về chúng tôi</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="footer-title">Liên hệ</h2>
+      <ul class="footer-list contact-list">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg><span>Công ty BOT Việt Nam (demo)<br>123 Nguyễn Văn Trỗi, Phường 8, Quận Phú Nhuận, TP. Hồ Chí Minh</span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:19006868">1900 6868</a></li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:hello@mayqueen.vn">hello@mayqueen.vn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <p class="disclaimer">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
+    <p class="footer-copy">© 2026 Mayqueen · Công ty BOT Việt Nam · mayqueen.vn — Bản demo giao diện · <a href="../index.html">← Tất cả demo</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
