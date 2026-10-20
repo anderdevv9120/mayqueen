@@ -181,7 +181,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ---------- 1. Hero ---------- */
 .hero { position: relative; min-height: 100vh; min-height: 100svh; overflow: hidden; background: var(--dark); display: flex; align-items: center; }
 .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
-.hero.has-video .hero__video { display: block; }
+.hero:has(source[src]:not([src=""])) .hero__video { display: block; }
+/* Match the video state before the deferred script runs, without an opening fade. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero:not(.has-video):has(source[src]:not([src=""])) .ba,
+  .hero:not(.has-video):has(source[src]:not([src=""])) .hero__shade,
+  .hero:not(.has-video):has(source[src]:not([src=""])) .hero__content { opacity: 0; visibility: hidden; }
+}
 /* Video <-> slide rotation like kobler (Swiper fade, 700ms): the video slide is bare,
    text + before/after slider fade in with .show-ba; the mute/play controls belong to the video. */
 .hero.has-video::before {
