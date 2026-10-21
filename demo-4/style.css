@@ -440,8 +440,112 @@ address a:hover, .footer__links a:hover { color: var(--gold); }
 .float-contact .to-top { background: var(--light); color: var(--ink); border-color: transparent; box-shadow: 0 .25rem 2.5rem rgba(0, 0, 0, .12); opacity: 0; visibility: hidden; }
 .float-contact .to-top.is-on { opacity: 1; visibility: visible; }
 
-/* ---------- Reveal ---------- */
+/* ---------- Motion: everything below is skipped under reduced motion ---------- */
+@keyframes rise { from { opacity: 0; transform: translateY(1.25rem); } }
+@keyframes fade { from { opacity: 0; } }
+@keyframes settle { from { scale: 1.08; } }
+@keyframes shimmer { from { background-position: 150% 0; } to { background-position: -50% 0; } }
+@keyframes ping { from { transform: scale(1); opacity: .7; } to { transform: scale(1.7); opacity: 0; } }
+@keyframes ring { 0%, 14%, 100% { transform: none; } 2%, 6%, 10% { transform: rotate(-14deg); } 4%, 8%, 12% { transform: rotate(14deg); } }
+@keyframes drift { from { translate: 0 -5%; } to { translate: 0 5%; } }
+@keyframes glow { to { transform: translate(30vw, 12rem); } }
+@keyframes progress { to { transform: scaleX(1); } }
+
 @media (prefers-reduced-motion: no-preference) {
-  .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .8s ease, transform .8s ease; }
+  /* reveal on scroll; --d staggers siblings. `translate` stays free for hover lifts */
+  .reveal {
+    opacity: 0; transform: translateY(1.5rem);
+    transition: opacity .8s ease var(--d, 0s), transform .8s ease var(--d, 0s), translate .4s ease, box-shadow .4s ease;
+  }
   .reveal.is-in { opacity: 1; transform: none; }
+  .certs__grid > :nth-child(2) { --d: .12s; }
+  .certs__grid > :nth-child(3) { --d: .24s; }
+  .certs__grid > :nth-child(4) { --d: .36s; }
+
+  /* section heads: title lines rise, eyebrow rules draw outward */
+  .reveal .title:not(.title--one) > span { opacity: 0; transform: translateY(60%); transition: opacity .9s ease .1s, transform .9s cubic-bezier(.2, .7, .2, 1) .1s; }
+  .reveal .title > span + span { transition-delay: .22s; }
+  .reveal.is-in .title > span { opacity: 1; transform: none; }
+  .reveal .eyebrow::before, .reveal .eyebrow::after { transform: scaleX(0); transition: transform .9s cubic-bezier(.2, .7, .2, 1) .3s; }
+  .reveal .eyebrow::before { transform-origin: right; }
+  .reveal .eyebrow::after { transform-origin: left; }
+  .reveal.is-in .eyebrow::before, .reveal.is-in .eyebrow::after { transform: none; }
+
+  .reveal .values li { opacity: 0; transform: translateY(1rem); transition: opacity .7s ease var(--d), transform .7s ease var(--d); }
+  .reveal.is-in .values li { opacity: 1; transform: none; }
+  .values li:nth-child(1) { --d: .35s; }
+  .values li:nth-child(2) { --d: .45s; }
+  .values li:nth-child(3) { --d: .55s; }
+  .values li:nth-child(4) { --d: .65s; }
+  .values .ico { transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+  .values li:hover .ico { transform: rotate(-10deg) scale(1.08); }
+
+  /* hero: text staggers in every time the slide shows; figure settles; knob pings */
+  .hero.show-ba .hero__content > *, .hero:not(.has-video) .hero__content > * { animation: rise 1s cubic-bezier(.2, .7, .2, 1) var(--d, 0s) both; }
+  .hero__content > :nth-child(2) { --d: .12s; }
+  .hero__content > :nth-child(3) { --d: .24s; }
+  .hero__content > :nth-child(4) { --d: .36s; }
+  .hero__content > :nth-child(5) { --d: .48s; }
+  .hero.show-ba .ba__fig, .hero:not(.has-video) .ba__fig { animation: settle 6s cubic-bezier(.2, .7, .2, 1) both; }
+  .hero__title span {
+    background: linear-gradient(100deg, var(--gold) 40%, #fff1c9 50%, var(--gold) 60%) 0 0 / 250% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: shimmer 5s linear infinite;
+  }
+  .ba__knob::after {
+    content: ""; position: absolute; inset: -1px; border-radius: inherit; border: 1px solid var(--gold);
+    animation: ping 2.4s ease-out infinite; pointer-events: none;
+  }
+  .ba:active .ba__knob::after, .ba__knob:focus-visible::after { animation: none; opacity: 0; }
+
+  /* hovers */
+  .btn__arrow { transition: transform .3s; }
+  .btn:hover .btn__arrow { transform: translateX(.25rem); }
+  .cert:hover { translate: 0 -.5rem; box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .35); }
+  .cert .ico { transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+  .cert:hover .ico { transform: translateY(-.25rem) rotate(-8deg); }
+  .road-card img { transition: transform 1.2s cubic-bezier(.2, .7, .2, 1); }
+  .road-card:hover img { transform: scale(1.07); }
+  .road-card__body { transition: transform .5s cubic-bezier(.2, .7, .2, 1); }
+  .road-card:hover .road-card__body { transform: translateY(-.5rem); }
+  .fb-card { transition: border-color .4s; }
+  .fb-card:hover { border-color: var(--gold); }
+  .avatar { transition: transform .4s cubic-bezier(.3, 1.6, .5, 1); }
+  .fb-card:hover .avatar { transform: scale(1.1); }
+  @media (min-width: 1024px) {
+    .nav a { padding-bottom: .375rem; background: linear-gradient(currentColor, currentColor) 50% 100% / 0 1px no-repeat; transition: color .3s, background-size .4s; }
+    .nav a:hover { background-size: 100% 1px; }
+  }
+
+  /* tabs: the new panel's image fades, ingredients cascade */
+  .panel:not([hidden]) .panel__img { animation: fade .8s ease both; }
+  .panel:not([hidden]) .ingredients li { animation: rise .6s cubic-bezier(.2, .7, .2, 1) var(--d, 0s) both; }
+  .ingredients li:nth-child(2) { --d: .07s; }
+  .ingredients li:nth-child(3) { --d: .14s; }
+  .ingredients li:nth-child(4) { --d: .21s; }
+
+  /* certs: slow gold glow drifting behind the cards */
+  .certs { overflow: hidden; }
+  .certs > .container { position: relative; }
+  .certs::before {
+    content: ""; position: absolute; top: -12rem; left: -10rem; width: 40rem; height: 40rem; border-radius: 50%;
+    background: radial-gradient(closest-side, rgba(212, 178, 106, .14), transparent); pointer-events: none;
+    animation: glow 16s ease-in-out infinite alternate;
+  }
+
+  /* floating buttons: hotline rings now and then, to-top slides in */
+  .float-contact a[href^="tel"] svg { animation: ring 4s ease-in-out infinite; }
+  .float-contact .to-top { translate: 0 .75rem; transition: background .3s, color .3s, opacity .3s, visibility .3s, translate .3s; }
+  .float-contact .to-top.is-on { translate: none; }
+
+  /* scroll-linked: header progress line, slow parallax on photos */
+  @supports (animation-timeline: scroll()) {
+    .site-header::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+      background: var(--gold); transform: scaleX(0); transform-origin: left;
+      animation: progress linear both; animation-timeline: scroll(root);
+    }
+    .story__media { overflow: hidden; } /* the scaled image must not spill past its fade */
+    .story__media img, .panel__img img { scale: 1.12; animation: drift linear both; animation-timeline: view(); }
+  }
 }
