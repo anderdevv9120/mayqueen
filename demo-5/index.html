@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mayqueen — Rừng Sáng · Chọn sống khỏe. Chọn yêu mình.</title>
-  <meta name="description" content="Mayqueen Slim và Yo Detox Extra — giảm cân lành mạnh, thải độc toàn diện. Bản demo giao diện Rừng Sáng. Phân phối bởi BOT Việt Nam.">
+  <meta name="description" content="Mayqueen Slim và Yo Detox Extra — giảm cân lành mạnh, thải độc toàn diện. Phân phối bởi BOT Việt Nam.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=vietnamese" rel="stylesheet">
@@ -22,10 +22,11 @@
       <nav id="site-nav" class="nav" aria-label="Điều hướng chính">
         <ul class="nav__group">
           <li><a href="#cau-chuyen">Câu chuyện</a></li>
-          <li><a href="#thanh-phan">Thành phần</a></li>
+          <li><a href="#tieu-chi">Tiêu chí</a></li>
           <li><a href="#chung-nhan">Chứng nhận</a></li>
         </ul>
         <ul class="nav__group">
+          <li class="product-menu"><details><summary>Sản phẩm <span aria-hidden="true">⌄</span></summary><ul class="product-menu__list"><li><a href="product.html">Mayqueen Slim</a></li><li><a href="product.html?product=detox">Yo Detox Extra</a></li><li><a href="#san-pham">Tất cả sản phẩm</a></li></ul></details></li>
           <li><a href="#danh-gia">Đánh giá</a></li>
           <li><a href="#lien-he">Liên hệ</a></li>
         </ul>
@@ -82,34 +83,41 @@
 
     <!-- 2. Brand story -->
     <section id="cau-chuyen" class="section section--light story" aria-labelledby="story-title">
-      <div class="story__media" aria-hidden="true">
-        <img src="../product-images/prod.webp" alt="" loading="lazy" width="800" height="1000">
-      </div>
+      <div class="story__media story__manifesto" aria-hidden="true"><p>Chậm lại.<br>Lắng nghe.<br><em>Yêu mình.</em></p></div>
       <div class="container">
         <div class="story__text reveal">
           <p class="eyebrow">01 · Câu chuyện</p>
           <h2 id="story-title" class="title"><span>Câu chuyện</span><span class="gold">Mayqueen</span></h2>
           <p class="lead">“Làm sao để chăm sóc vóc dáng mà không phải đánh đổi sức khỏe?” — câu hỏi ấy là điểm khởi đầu của Mayqueen.</p>
-          <p>Chúng tôi chọn con đường chậm mà chắc: nghiên cứu thành phần có nguồn gốc tự nhiên, công bố minh bạch hàm lượng, và luôn đặt lối sống lành mạnh làm nền tảng. Sản phẩm chỉ là người bạn đồng hành; chính bạn mới là người tạo nên thay đổi.</p>
-          <ul class="values">
-            <li>
-              <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3.4V12c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V5.4z"/><path class="cut" d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-              <div><h3>Thông tin minh bạch</h3><p>Công bố rõ thành phần, hàm lượng và cách dùng.</p></div>
-            </li>
-            <li>
-              <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.5C11 4 4 8.6 4 16.2c0 1.3.2 2.6.6 3.6 1 .4 2.2.6 3.4.6C16.2 20.4 20 12.6 20 3.5z"/><path class="cut" d="M4.5 20.5L14 11"/></svg></span>
-              <div><h3>Thói quen lành mạnh</h3><p>Kết hợp ăn uống cân bằng và vận động đều đặn.</p></div>
-            </li>
-            <li>
-              <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-8.5-5-8.5-11.2A4.8 4.8 0 0112 6.6a4.8 4.8 0 018.5 3.2C20.5 16 12 21 12 21z"/></svg></span>
-              <div><h3>Đồng hành mỗi ngày</h3><p>Chuyên viên tư vấn 1:1 theo dõi lộ trình của bạn.</p></div>
-            </li>
-            <li>
-              <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5h12.5v10H2zM15.5 8h3.8l2.7 3.4V15h-6.5z"/><circle cx="6.5" cy="17.6" r="2.2"/><circle class="hole" cx="6.5" cy="17.6" r=".9"/><circle cx="17.5" cy="17.6" r="2.2"/><circle class="hole" cx="17.5" cy="17.6" r=".9"/></svg></span>
-              <div><h3>Giao nhanh toàn quốc</h3><p>Nội thành 1–2 ngày, miễn phí từ 500.000đ.</p></div>
-            </li>
-          </ul>
-          <a class="btn" href="#lien-he">Nhận tư vấn miễn phí <span class="btn__arrow" aria-hidden="true">→</span></a>
+          <p>Giữa những chuẩn mực về vẻ đẹp và nhịp sống vội vàng, chúng tôi nhận ra rằng điều phụ nữ cần trước tiên là được lắng nghe — cả từ những người xung quanh và từ chính mình.</p>
+          <p>Mayqueen chọn con đường chậm mà chắc: bắt đầu từ sự thấu hiểu cơ thể, nuôi dưỡng những thói quen nhỏ và trân trọng mỗi bước tiến. Chúng tôi tin rằng sống khỏe không phải một đích đến, mà là cách bạn yêu thương bản thân mỗi ngày.</p>
+          <blockquote class="story__quote">“Không chạy theo một khuôn mẫu.<br>Chỉ trở thành phiên bản khỏe mạnh, tự tin của chính mình.”</blockquote>
+          <p>Đó là con đường Mayqueen muốn đi: đồng hành cùng phụ nữ Việt bằng sự tử tế, chân thành và bền bỉ.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tieu-chi" class="section section--light criteria" aria-labelledby="criteria-title">
+      <div class="container">
+        <p class="eyebrow">02 · Tiêu chí của Mayqueen</p>
+        <h2 id="criteria-title" class="title">Từ niềm tin đến <span class="gold">những lựa chọn</span></h2>
+        <p class="lead">Để đi cùng hành trình sống khỏe, mỗi sản phẩm cần bắt đầu từ những tiêu chí rõ ràng.</p>
+        <ol class="criteria__grid">
+          <li><span>01</span><h3>Minh bạch thông tin</h3><p>Thành phần, nguồn gốc và hướng dẫn sử dụng cần được trình bày rõ ràng, dễ hiểu.</p></li>
+          <li><span>02</span><h3>Sức khỏe làm nền tảng</h3><p>Đồng hành cùng ăn uống cân bằng và vận động phù hợp, không thay thế thói quen lành mạnh.</p></li>
+          <li><span>03</span><h3>Phù hợp mỗi người</h3><p>Lắng nghe nhu cầu và thể trạng để lựa chọn cách chăm sóc phù hợp với bản thân.</p></li>
+          <li><span>04</span><h3>Đồng hành bền bỉ</h3><p>Hướng dẫn cụ thể, giải đáp thắc mắc và khuyến khích những thay đổi tích cực mỗi ngày.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="san-pham" class="section section--light catalog" aria-labelledby="products-title">
+      <div class="container">
+        <p class="eyebrow">03 · Sản phẩm</p>
+        <h2 id="products-title" class="title">Lựa chọn cho <span class="gold">hành trình của bạn</span></h2>
+        <div class="catalog__grid">
+          <article class="catalog-card"><a href="product.html" class="catalog-card__image"><img src="../product-images/prod2.webp" alt="Mayqueen Slim" loading="lazy" width="800" height="800"></a><div><p class="eyebrow">Mayqueen</p><h3>Mayqueen Slim</h3><p>Lọ 30 viên nang · Đồng hành cùng hành trình chăm sóc vóc dáng.</p><a class="link-arrow" href="product.html">Khám phá sản phẩm <span aria-hidden="true">→</span></a></div></article>
+          <article class="catalog-card"><a href="product.html?product=detox" class="catalog-card__image"><img src="../product-images/prod5.webp" alt="Yo Detox Extra" loading="lazy" width="800" height="800"></a><div><p class="eyebrow">Mayqueen</p><h3>Yo Detox Extra</h3><p>Hộp 20 gói bột pha uống · Nghi thức chăm sóc bản thân mỗi ngày.</p><a class="link-arrow" href="product.html?product=detox">Khám phá sản phẩm <span aria-hidden="true">→</span></a></div></article>
         </div>
       </div>
     </section>
@@ -118,7 +126,7 @@
     <section id="thanh-phan" class="section section--light inside" aria-labelledby="inside-title">
       <div class="container inside__grid">
         <div class="inside__col reveal">
-          <p class="eyebrow">02 · Thành phần</p>
+          <p class="eyebrow">04 · Thành phần</p>
           <h2 id="inside-title" class="title"><span>Bên trong</span><span class="gold">Sản phẩm</span></h2>
           <div data-tabs>
             <div class="tabs" role="tablist" aria-label="Chọn dòng sản phẩm">
@@ -146,13 +154,13 @@
               </ol>
             </div>
           </div>
-          <p class="note">*Thành phần mang tính minh họa cho bản demo. Hàm lượng tính trên một khẩu phần.</p>
+          <p class="note">*Thành phần mang tính minh họa. Hàm lượng tính trên một khẩu phần.</p>
         </div>
 
         <div class="inside__col reveal">
           <div class="col-head">
             <div>
-              <p class="eyebrow">03 · Lộ trình</p>
+              <p class="eyebrow">05 · Lộ trình</p>
               <h2 class="title"><span>Lộ trình</span><span class="gold">30 ngày</span></h2>
             </div>
           </div>
@@ -205,14 +213,14 @@
     <section id="chung-nhan" class="section section--dark certs" aria-labelledby="certs-title">
       <div class="container">
         <div class="center-head reveal">
-          <p class="eyebrow">04 · Cam kết</p>
+          <p class="eyebrow">06 · Cam kết</p>
           <h2 id="certs-title" class="title"><span>Chất lượng</span><span class="gold">Kiểm chứng</span></h2>
         </div>
         <ul class="certs__grid">
           <li class="card cert reveal">
             <p class="cert__bar">Cam kết 01</p>
             <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l8 3.4V12c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V5.4z"/><path class="cut" d="M8.5 12l2.5 2.5 4.5-5"/></svg></span>
-            <h3>Đạt chuẩn GMP (demo)</h3>
+            <h3>Đạt chuẩn GMP</h3>
             <p>Sản xuất trên dây chuyền đạt tiêu chuẩn thực hành sản xuất tốt.</p>
             <a class="link-arrow" href="#lien-he">Hỏi chuyên viên <span aria-hidden="true">→</span></a>
           </li>
@@ -235,7 +243,7 @@
             <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path class="cut" d="M16 12a4 4 0 11-1.2-2.85M15.2 6.4v3h-3"/></svg></span>
             <h3>Hoàn tiền nếu không hài lòng</h3>
             <p>Hoàn tiền trong 7 ngày với sản phẩm còn nguyên tem, theo chính sách đổi trả.</p>
-            <a class="link-arrow" href="../demo-3/policy.html#doi-tra">Xem chính sách <span aria-hidden="true">→</span></a>
+            <a class="link-arrow" href="#doi-tra">Xem chính sách <span aria-hidden="true">→</span></a>
           </li>
         </ul>
       </div>
@@ -245,7 +253,7 @@
     <section id="danh-gia" class="section section--light feedback" aria-labelledby="fb-title">
       <div class="container">
         <div class="center-head reveal">
-          <p class="eyebrow">05 · Khách hàng</p>
+          <p class="eyebrow">07 · Khách hàng</p>
           <h2 id="fb-title" class="title title--one">Sống đẹp cùng <span class="gold">Mayqueen</span></h2>
           <p class="center-head__sub">Cảm nhận từ những khách hàng đã đồng hành cùng Mayqueen.</p>
         </div>
@@ -298,6 +306,17 @@
         </div>
       </div>
     </section>
+    <section id="chinh-sach" class="section section--light order-policy" aria-labelledby="policy-title">
+      <div class="container">
+        <p class="eyebrow">08 · Đặt hàng &amp; giao nhận</p>
+        <h2 id="policy-title" class="title">An tâm lựa chọn.<span class="gold">Thuận tiện nhận hàng.</span></h2>
+        <div class="policy-grid">
+          <article id="dat-hang"><span class="policy-number">01</span><h3>Đặt hàng cùng Mayqueen</h3><p>Chọn sản phẩm, liên hệ hotline để được tư vấn và xác nhận số lượng, thông tin người nhận cùng tổng chi phí trước khi giao.</p><a class="link-arrow" href="#san-pham">Chọn sản phẩm <span aria-hidden="true">→</span></a></article>
+          <article id="giao-hang"><span class="policy-number">02</span><h3>Giao hàng toàn quốc</h3><p>Mayqueen hỗ trợ giao hàng trên toàn quốc. Phí vận chuyển và thời gian dự kiến được thông báo khi xác nhận đơn, tùy địa chỉ nhận hàng.</p><a class="link-arrow" href="tel:19006868">Hỏi về giao nhận <span aria-hidden="true">→</span></a></article>
+          <article id="doi-tra"><span class="policy-number">03</span><h3>Hỗ trợ sau khi nhận</h3><p>Kiểm tra sản phẩm khi nhận hàng. Nếu có nhầm lẫn, hư hỏng hoặc cần hỗ trợ đổi trả, liên hệ Mayqueen để được hướng dẫn điều kiện và cách xử lý.</p><a class="link-arrow" href="#lien-he">Liên hệ hỗ trợ <span aria-hidden="true">→</span></a></article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- 6. Company info -->
@@ -309,7 +328,7 @@
         <a class="btn" href="tel:19006868">Gọi 1900 6868 <span class="btn__arrow" aria-hidden="true">→</span></a>
       </div>
       <div>
-        <h2 id="footer-title" class="footer__title">Công ty BOT Việt Nam (demo)</h2>
+        <h2 id="footer-title" class="footer__title">Công ty BOT Việt Nam</h2>
         <address>
           <span>123 Nguyễn Thị Minh Khai, Phường Bến Thành, Quận 1, TP. Hồ Chí Minh</span>
           <span>Hotline: <a href="tel:19006868">1900 6868</a></span>
@@ -324,18 +343,14 @@
           <li><a class="ico" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"/><path class="hole" d="M10.5 9.5v5l4-2.5z"/></svg></a></li>
         </ul>
         <ul class="footer__links">
-          <li><a href="../demo-3/policy.html#giao-hang">Chính sách giao hàng</a></li>
-          <li><a href="../demo-3/policy.html#doi-tra">Đổi trả &amp; hoàn tiền</a></li>
+          <li><a href="#giao-hang">Chính sách giao hàng</a></li>
+          <li><a href="#doi-tra">Đổi trả &amp; hoàn tiền</a></li>
           <li><a href="../demo-3/policy.html#bao-mat">Bảo mật thông tin</a></li>
         </ul>
       </div>
     </div>
     <div class="container footer__legal">
       <p class="disclaimer">Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p>
-      <div class="footer__bottom">
-        <p>© 2026 Mayqueen · mayqueen.vn · Bản demo giới thiệu giao diện.</p>
-        <p><a href="../index.html">← Tất cả demo</a></p>
-      </div>
     </div>
   </footer>
 
