@@ -12,6 +12,19 @@
     function onScroll() { el.classList.toggle('is-solid', window.scrollY > 40); }
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
+    // desktop: hovering the product trigger opens its <details> after a short delay (a passing cursor
+    // doesn't flash it open); click/keyboard still toggle natively
+    var hoverNav = window.matchMedia('(hover: hover) and (min-width: 1024px)');
+    el.querySelectorAll('.product-menu details').forEach(function (d) {
+      var timer;
+      d.parentNode.addEventListener('mouseenter', function () {
+        if (hoverNav.matches) timer = setTimeout(function () { d.open = true; }, 150);
+      });
+      d.parentNode.addEventListener('mouseleave', function () {
+        clearTimeout(timer);
+        if (hoverNav.matches) d.open = false;
+      });
+    });
     if (!btn) return;
     function setOpen(open) {
       el.classList.toggle('nav-open', open);
