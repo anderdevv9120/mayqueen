@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt hàng — Mayqueen</title>
+  <meta name="description" content="Hoàn tất thông tin nhận hàng cùng Mayqueen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script>
+    var purchaseLayout = new URLSearchParams(window.location.search).get('layout');
+    document.documentElement.dataset.purchaseLayout = ['classic', 'editorial', 'sheet'].includes(purchaseLayout) ? purchaseLayout : 'classic';
+  </script>
+</head>
+<body class="purchase-page">
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+  <header class="purchase-header">
+    <a class="logo" href="index.html#trang-chu" aria-label="Mayqueen — Trang chủ">MAYQUEEN</a>
+    <a class="purchase-back" href="product.html" data-product-back><span aria-hidden="true">←</span> Quay lại sản phẩm</a>
+    <p class="purchase-tagline">Mayqueen · Chọn sống khỏe. Chọn yêu mình.</p>
+  </header>
+  <nav class="purchase-picker" aria-label="Chọn bố cục đặt hàng">
+    <span>Xem bố cục</span>
+    <a href="checkout.html?layout=classic" data-purchase-layout="classic" aria-current="page">01 · Gọn gàng &amp; rõ ràng</a>
+    <a href="checkout.html?layout=editorial" data-purchase-layout="editorial">02 · Thanh lịch &amp; thiên nhiên</a>
+    <a href="checkout.html?layout=sheet" data-purchase-layout="sheet">03 · Tinh gọn &amp; tập trung</a>
+  </nav>
+
+  <main id="main" class="purchase-main">
+    <aside class="purchase-story" aria-label="Cùng Mayqueen chăm sóc chính mình">
+      <p class="eyebrow">Chăm sóc từ bên trong</p>
+      <h2>Một bước nhỏ,<br>chăm sóc chính mình.</h2>
+      <p>Mayqueen đồng hành cùng bạn trên hành trình sống khỏe, cân bằng và tự tin mỗi ngày.</p>
+      <figure class="purchase-arch"><img data-product-image src="../product-images/prod2.webp" alt="Mayqueen Slim" width="800" height="1000"></figure>
+      <div class="purchase-story__product"><div><h3 data-product-name>Mayqueen Slim</h3><p><span data-product-pack>Lọ 30 viên nang</span> · Số lượng: 1</p></div><strong data-product-price>550.000đ</strong></div>
+      <dl class="purchase-story__totals"><div><dt>Tạm tính</dt><dd data-product-price>550.000đ</dd></div><div><dt>Phí giao hàng</dt><dd>Thông báo khi xác nhận</dd></div></dl>
+    </aside>
+
+    <div class="purchase-content">
+      <div class="purchase-intro">
+        <p class="eyebrow">Một lựa chọn dành cho bạn</p>
+        <h1>Hoàn tất đặt hàng</h1>
+        <p>Chăm sóc từ bên trong, gần hơn với phiên bản bạn yêu.</p>
+      </div>
+      <form class="purchase-form" data-purchase-form action="success.html" method="post" novalidate>
+        <section class="purchase-fields" aria-labelledby="recipient-title">
+          <h2 id="recipient-title">Thông tin người nhận</h2>
+          <div class="purchase-fields__grid">
+            <div class="purchase-field"><label for="fullname">Họ và tên <span aria-hidden="true">*</span></label><input id="fullname" name="fullname" type="text" autocomplete="name" placeholder="Nhập họ và tên" minlength="2" maxlength="100" required></div>
+            <div class="purchase-field"><label for="phone">Số điện thoại <span aria-hidden="true">*</span></label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="Nhập số điện thoại" maxlength="24" required></div>
+            <div class="purchase-field"><label for="province">Tỉnh / Thành phố <span aria-hidden="true">*</span></label><select id="province" name="province" autocomplete="address-level1" required><option value="">Chọn Tỉnh/Thành</option></select></div>
+            <div class="purchase-field"><label for="ward">Phường / Xã <span aria-hidden="true">*</span></label><select id="ward" name="ward" autocomplete="address-level2" required disabled><option value="">Chọn Tỉnh/Thành trước</option></select></div>
+            <div class="purchase-field purchase-field--address"><label for="address">Địa chỉ chi tiết <span aria-hidden="true">*</span></label><input id="address" name="address" type="text" autocomplete="address-line1" placeholder="Số nhà, tên đường, tòa nhà..." minlength="5" maxlength="200" required></div>
+          </div>
+          <fieldset class="purchase-payment">
+            <legend>Phương thức thanh toán</legend>
+            <label class="purchase-choice"><input type="radio" name="payment" value="cod" checked><span class="purchase-choice__dot" aria-hidden="true"></span><span class="purchase-choice__text"><strong>Thanh toán khi nhận hàng (COD)</strong><small>Trả tiền mặt cho shipper khi nhận hàng.</small></span></label>
+            <label class="purchase-choice"><input type="radio" name="payment" value="bank"><span class="purchase-choice__dot" aria-hidden="true"></span><span class="purchase-choice__text"><strong>Chuyển khoản ngân hàng</strong><small>Đơn được xác nhận khi tiền về tài khoản.</small></span></label>
+            <div class="purchase-qr" data-payment-note="bank" hidden>
+              <span class="purchase-qr__box" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3z"/><path d="M6 6h1v1H6zM17 6h1v1h-1zM6 17h1v1H6zM14 14h2v2h-2zM19 14h2v2h-2zM14 19h2v2h-2zM18 18h3v3h-3z"/></svg></span>
+              <p><b>Mã QR và số tài khoản cho đúng <span data-product-price>550.000đ</span></b> hiện ngay sau khi bạn đặt hàng. Quét bằng app ngân hàng, đơn tự xác nhận khi tiền về.</p>
+            </div>
+          </fieldset>
+        </section>
+
+        <aside class="purchase-order" aria-labelledby="order-title">
+          <h2 id="order-title">Sản phẩm của bạn</h2>
+          <div class="purchase-product">
+            <img data-product-image src="../product-images/prod2.webp" alt="Mayqueen Slim" width="160" height="160">
+            <div class="purchase-product__info"><h3 data-product-name>Mayqueen Slim</h3><p data-product-pack>Lọ 30 viên nang</p><p>Số lượng: 1</p><strong data-product-price>550.000đ</strong></div>
+          </div>
+          <dl class="purchase-totals"><div><dt>Tạm tính</dt><dd data-product-price>550.000đ</dd></div><div><dt>Phí giao hàng</dt><dd>Thông báo khi xác nhận</dd></div></dl>
+        </aside>
+
+        <section class="purchase-policies" aria-labelledby="purchase-policy-title">
+          <h2 id="purchase-policy-title">An tâm mua sắm</h2>
+          <ul>
+            <li><span class="purchase-policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h12v12H3M15 9h4l3 4v4h-4M3 9H1m3 4H2m5 4h7"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span><div><h3>Giao hàng toàn quốc</h3><p>Phí và thời gian giao được xác nhận theo địa chỉ.</p></div></li>
+            <li><span class="purchase-policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7Zm0 10L3 7m9 5 9-5m-9 5v10M7.5 4.5l9 5"/></svg></span><div><h3>Kiểm tra khi nhận hàng</h3><p>Liên hệ Mayqueen nếu sản phẩm nhầm lẫn hoặc hư hỏng.</p></div></li>
+            <li><span class="purchase-policy-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2c3 2 6 3 9 3v6c0 5-4 9-9 11-5-2-9-6-9-11V5c3 0 6-1 9-3Z"/><path d="m8 12 3 3 5-6"/></svg></span><div><h3>Xác nhận trước khi giao</h3><p>Mayqueen sẽ liên hệ xác nhận thông tin đơn hàng.</p></div></li>
+          </ul>
+        </section>
+
+        <div class="purchase-submit">
+          <button class="btn" type="submit" data-purchase-submit disabled>Đặt hàng ngay <span class="btn__arrow" aria-hidden="true">→</span></button>
+          <p>Mayqueen sẽ liên hệ xác nhận đơn hàng của bạn.</p>
+          <noscript><p>Vui lòng bật JavaScript để đặt hàng hoặc <a href="tel:19006868">gọi 1900 6868</a>.</p></noscript>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="purchase-footer"><p>Cần hỗ trợ? <a href="tel:19006868">1900 6868</a></p><p>Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p></footer>
+  <script src="product.js" defer></script>
+  <script src="checkout.js" defer></script>
+</body>
+</html>

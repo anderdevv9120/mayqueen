@@ -21,17 +21,25 @@
     list.innerHTML = fields.ingredients.replace(/\.$/, '').split(', ').map(function (item) { return '<li>' + item + '</li>'; }).join('');
   });
   var layout = document.querySelector('[data-layout-link][aria-current]');
-  document.title = name + ' — Mayqueen · Bố cục ' + parseInt(layout.textContent, 10);
+  if (layout) document.title = name + ' — Mayqueen · Bố cục ' + parseInt(layout.textContent, 10);
   document.querySelector('meta[name="description"]').content = fields.description;
   document.querySelectorAll('[data-layout-link]').forEach(function (link) {
     if (detox) link.search = '?product=detox';
   });
+  document.querySelectorAll('[data-checkout-link]').forEach(function (link) {
+    var url = new URL(link.href, window.location.href);
+    url.searchParams.set('product', detox ? 'detox' : 'slim');
+    link.href = url.href;
+  });
 
-  var mainImage = document.querySelector('[data-product-image]');
+  var mainImages = document.querySelectorAll('[data-product-image]');
+  var mainImage = mainImages[0];
   var thumbs = document.querySelectorAll('[data-product-thumb]');
   function select(index) {
-    mainImage.src = '../product-images/' + images[index];
-    mainImage.alt = name + ' — hình sản phẩm ' + (index + 1);
+    mainImages.forEach(function (image) {
+      image.src = '../product-images/' + images[index];
+      image.alt = name + ' — hình sản phẩm ' + (index + 1);
+    });
     thumbs.forEach(function (button, i) { button.setAttribute('aria-pressed', String(i === index)); });
   }
   thumbs.forEach(function (button, i) {

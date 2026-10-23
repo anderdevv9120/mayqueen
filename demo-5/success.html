@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đặt hàng thành công — Mayqueen</title>
+  <meta name="description" content="Cảm ơn bạn đã lựa chọn Mayqueen. Chúng tôi sẽ sớm liên hệ xác nhận đơn hàng.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="checkout.css">
+  <script>
+    var purchaseLayout = new URLSearchParams(window.location.search).get('layout');
+    document.documentElement.dataset.purchaseLayout = ['classic', 'editorial', 'sheet'].includes(purchaseLayout) ? purchaseLayout : 'classic';
+  </script>
+</head>
+<body class="purchase-page purchase-page--success">
+  <a class="skip-link" href="#main">Bỏ qua đến nội dung chính</a>
+  <header class="purchase-header">
+    <a class="logo" href="index.html#trang-chu" aria-label="Mayqueen — Trang chủ">MAYQUEEN</a>
+    <a class="purchase-back" href="product.html" data-product-back><span aria-hidden="true">←</span> Quay lại sản phẩm</a>
+    <p class="purchase-tagline">Mayqueen · Chọn sống khỏe. Chọn yêu mình.</p>
+  </header>
+  <nav class="purchase-picker" aria-label="Chọn bố cục đặt hàng">
+    <span>Xem bố cục</span>
+    <a href="success.html?layout=classic" data-purchase-layout="classic" aria-current="page">01 · Gọn gàng &amp; rõ ràng</a>
+    <a href="success.html?layout=editorial" data-purchase-layout="editorial">02 · Thanh lịch &amp; thiên nhiên</a>
+    <a href="success.html?layout=sheet" data-purchase-layout="sheet">03 · Tinh gọn &amp; tập trung</a>
+  </nav>
+
+  <main id="main" class="purchase-main purchase-main--success">
+    <aside class="purchase-story" aria-label="Cùng Mayqueen chăm sóc chính mình">
+      <p class="eyebrow">Chăm sóc từ bên trong</p>
+      <h2>Sống khỏe hôm nay,<br>cho một phiên bản tốt hơn ngày mai.</h2>
+      <p>Mayqueen đồng hành cùng bạn trên hành trình sống khỏe, cân bằng và tự tin mỗi ngày.</p>
+    </aside>
+
+    <div class="purchase-content purchase-success">
+      <span class="purchase-success__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>
+      <div class="purchase-success__copy">
+        <h1>Đặt hàng thành công!</h1>
+        <p>Cảm ơn bạn đã lựa chọn Mayqueen.</p>
+        <p>Chúng tôi sẽ sớm liên hệ xác nhận đơn hàng.</p>
+        <a class="btn" href="index.html#trang-chu">Về trang chủ <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+      <aside class="purchase-success__order" aria-labelledby="success-order-title">
+        <h2 id="success-order-title">Sản phẩm đã đặt</h2>
+        <div class="purchase-product">
+          <img data-product-image src="../product-images/prod2.webp" alt="Mayqueen Slim" width="160" height="160">
+          <div class="purchase-product__info"><h3 data-product-name>Mayqueen Slim</h3><p data-product-pack>Lọ 30 viên nang</p><p>Số lượng: 1</p><strong data-product-price>550.000đ</strong></div>
+        </div>
+        <p class="purchase-success__payment">Thanh toán: <strong data-payment-label>Thanh toán khi nhận hàng (COD)</strong></p>
+      </aside>
+    </div>
+  </main>
+  <p class="purchase-side purchase-side--left" aria-hidden="true">Sống khỏe hơn mỗi ngày</p>
+  <p class="purchase-side purchase-side--right" aria-hidden="true">Dành cho phiên bản tốt đẹp hơn</p>
+
+  <footer class="purchase-footer"><p>Cần hỗ trợ? <a href="tel:19006868">1900 6868</a></p><p>Thực phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</p></footer>
+  <script src="product.js" defer></script>
+  <script src="checkout.js" defer></script>
+</body>
+</html>
+

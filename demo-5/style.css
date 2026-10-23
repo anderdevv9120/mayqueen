@@ -651,6 +651,7 @@ address a:hover, .footer__links a:hover { color: var(--gold-hi); }
 .product-price strong { font: 500 2.25rem/1 var(--serif); color: var(--dark); }
 .product-price span { font-size: .75rem; color: var(--ink-soft); }
 .product-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+.product-actions .link-arrow { min-height: 44px; padding: .75rem 1.3rem; border: 1px solid var(--gold-hi); border-radius: 2.5rem; background: transparent; }
 .product-services { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; padding-top: 1.25rem; margin-top: 1.5rem; border-top: 1px solid var(--line-gold); font-size: .7rem; color: var(--gold-text); }
 .product-layout--classic .product-summary :is(.eyebrow, .note, .btn, .link-arrow, .product-price span) { font-size: 1rem; }
 .product-layout--classic .product-facts { font-size: 1.166667rem; }
