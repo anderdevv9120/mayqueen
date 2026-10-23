@@ -166,7 +166,7 @@ html[data-purchase-layout="editorial"] .purchase-story::before { content: ""; z-
 .purchase-story__product h3 { font: 500 1.7rem/1.2 var(--serif); }
 .purchase-story__product p { font-size: .7rem; margin: .4rem 0 0; color: var(--on-dark-soft); }
 .purchase-story__product strong { padding: .3rem .7rem; border: 1px solid var(--gold); border-radius: 2rem; font: 500 1.65rem/1.2 var(--serif); color: var(--gold-hi); }
-html[data-purchase-layout="editorial"] .purchase-content { min-width: 0; padding: 2.5rem 2rem 2rem 3rem; border-radius: 7rem .75rem .75rem 7rem; background: var(--light); color: var(--ink); }
+html[data-purchase-layout="editorial"] .purchase-content { min-width: 0; padding: 2.5rem 2rem 2rem 3rem; border-radius: 3rem; background: var(--light); color: var(--ink); }
 html[data-purchase-layout="editorial"] .purchase-intro h1 { font-size: 3.1rem; }
 html[data-purchase-layout="editorial"] .purchase-intro > p:last-child { font: 400 .8rem/1.7 var(--sans); }
 html[data-purchase-layout="editorial"] .purchase-form { grid-template-columns: minmax(0, 1.2fr) minmax(0, .9fr); grid-template-areas: "fields order" "submit submit" "policies policies"; gap: 1.7rem 1rem; }
